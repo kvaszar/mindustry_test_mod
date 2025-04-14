@@ -1,0 +1,8 @@
+name: "RRock"
+displayName: "This isn't a mod."
+author: kvaszar&major_alef
+description: "some things"
+version: "1.0"
+minGameVersion: "147"
+dependencies: [ ]
+hidden: false
