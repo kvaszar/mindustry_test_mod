@@ -7,11 +7,11 @@
 "range": 280,
 "targetAir": true,
 
-       "legGroupSize": 2,
+       "legGroupSize": 1,
        "legCount": 4,
       "legContinuousMove": true,
   
-  "legLength": 12, 
+  "legLength": 9.5, 
   "allowLegStep": true,
   "hovering": false,
 
@@ -38,34 +38,7 @@ weapons: [
         shootStatus: unmoving
         shootStatusDuration: 60
         bullet: {
-            "chargeEffect": {
-                "type": "multiEffect",
-                "lifetime": 30,
-                "effects": [
-                    {
-                      "type": "WaveEffect",
-                      "lifetime": 30,
-                      "sizeFrom": 30,
-                      "sizeTo": 0,
-                      "interp": "pow3In",
-                      "strokeFrom": 0,
-                      "strokeTo": 6,
-                      "colorFrom": "66B1FFFF",
-                      "colorTo": "A9D8FFFF"
-                    },    
-                    {
-                        "type": "WaveEffect",
-                        "lifetime": 30,
-                        "sizeFrom": 30,
-                        "sizeTo": 0,
-                        "interp": "pow3In",
-                        "strokeFrom": 0,
-                        "strokeTo": 6,
-                        "colorFrom": "66B1FFFF",
-                        "colorTo": "A9D8FFFF"
-                    },    
-                ]
-            },
+            shootEffect: smokeCloud
             speed: 10
             lifetime: 28
             damage: 100
