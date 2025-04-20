@@ -1,0 +1,5 @@
+{
+    name: armored
+    healthMultiplier: 1.4
+    speedMultiplier: 0.1
+}

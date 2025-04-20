@@ -1,124 +1,122 @@
-
-"type": "legs",
-"speed": 0.7,
-"hitSize": 14,
-"health": 1600,
-"faceTarget": true,
-"range": 200,
-"targetAir": true,
-
-       "legGroupSize": 2,
-       "legCount": 4,
-      "legContinuousMove": true,
-      "rippleScale": 0.2,     
-  "legLength": 12, 
-  "allowLegStep": true,
-  "hovering": false,
-
-weapons: [
-    {   
-        name: NeedMoreBullets-gun1
-        x: 7
-        y: 0
-        shootX: -0.6
-        shootY: 10
-        mirror: true
-        alternate: false
-        shoot: {
-            type: ShootPattern
-            shotDelay: 1
-            shots: 300
-            firstShotDelay: 60
+{
+    type: legs
+    speed: 0.7
+    hitSize: 14
+    health: 1600
+    faceTarget: true
+    range: 200
+    targetAir: true
+    legGroupSize: 2
+    legCount: 4
+    legContinuousMove: true
+    rippleScale: 0.2
+    legLength: 12
+    allowLegStep: true
+    hovering: false
+    weapons: [
+        {
+            name: NeedMoreBullets-gun1
+            x: 7
+            y: 0
+            shootX: -0.6
+            shootY: 10
+            mirror: true
+            alternate: false
+            shoot: {
+                type: ShootPattern
+                shotDelay: 1
+                shots: 300
+                firstShotDelay: 60
+            }
+            rotate: true
+            inacurracy: 8
+            reload: 240
+            recoil: 1
+            shootCone: 15
+            rotationLimit: 0
+            cooldownTime: 240
+            bullet: {
+                speed: 8
+                lifetime: 25
+                damage: 3
+                width: 3
+                height: 8
+                despawnHit: true
+                despawnEffect: none
+                chargeEffect: {
+                    type: multiEffect
+                    lifetime: 60
+                    effects: [
+                        {
+                            type: ParticleEffect
+                            line: true
+                            particles: 2
+                            lifetime: 20
+                            offset: 50
+                            length: 12
+                            baseLength: -12
+                            cone: 8
+                            interp: pow3In
+                            sizeInterp: pow5Out
+                            strokeFrom: 0
+                            strokeTo: 2
+                            lenFrom: 0
+                            lenTo: 2
+                            colorFrom: A9D8FFFF
+                            colorTo: 66B1FFFF
+                        }
+                        {
+                            type: ParticleEffect
+                            line: true
+                            particles: 4
+                            lifetime: 20
+                            offset: 50
+                            length: 4
+                            baseLength: -4
+                            cone: 4
+                            interp: pow3In
+                            sizeInterp: pow5Out
+                            strokeFrom: 0
+                            strokeTo: 2
+                            lenFrom: 0
+                            lenTo: 4
+                            colorFrom: A9D8FFFF
+                            colorTo: 66B1FFFF
+                        }
+                    ]
+                }
+            }
         }
-        rotate: true
-        inacurracy: 8
-        reload: 240
-        recoil: 1
-        shootCone: 15
-        rotationLimit: 0
-        cooldownTime: 240
-        bullet: {
-            speed: 8
-            lifetime: 25
-            damage: 3
-            width: 3
-            height: 8
-            despawnHit: true
-            despawnEffect: none
-            "chargeEffect": {
-                "type": "multiEffect",
-                "lifetime": 60,
-                "effects": [
-                    {
-                        type: ParticleEffect
-                        line: true
-                        particles: 2
-                        lifetime: 20
-                        offset: 50
-                        length: 12
-                        baseLength: -12
-                        cone: 8
-                        interp: pow3In
-                        sizeInterp: pow5Out
-                        strokeFrom: 0
-                        strokeTo: 2
-                        lenFrom: 0
-                        lenTo: 2
-                        colorFrom: A9D8FFFF
-                        colorTo: 66B1FFFF
-                    },
-                    {
-                        type: ParticleEffect
-                        line: true
-                        particles: 4
-                        lifetime: 20
-                        offset: 50
-                        length: 4
-                        baseLength: -4
-                        cone: 4
-                        interp: pow3In
-                        sizeInterp: pow5Out
-                        strokeFrom: 0
-                        strokeTo: 2
-                        lenFrom: 0
-                        lenTo: 4
-                        colorFrom: A9D8FFFF
-                        colorTo: 66B1FFFF
-                    }
-                ]
-            },
-        }
-    },
-    {   
-        name: NeedMoreBullets-gun2
-        x: 8
-        y: 0
-        shootX: 0.6
-        shootY: 11
-        mirror: true
-        alternate: false
-        shoot: {
-            type: ShootPattern
-            shotDelay: 1
-            shots: 300
-            firstShotDelay: 60
-        }
-        rotate: true
-        inacurracy: 8
-        reload: 300
-        recoil: 1
-        shootCone: 10
-        rotationLimit: 0
-        cooldownTime: 240
-        bullet: {
-            speed: 8
-            lifetime: 25
-            damage: 3
-            width: 3
-            height: 8
-            despawnHit: true
-            despawnEffect: none
-            chargeEffect: smokeCloud
+        {
+            name: NeedMoreBullets-gun2
+            x: 8
+            y: 0
+            shootX: 0.6
+            shootY: 11
+            mirror: true
+            alternate: false
+            shoot: {
+                type: ShootPattern
+                shotDelay: 1
+                shots: 300
+                firstShotDelay: 60
+            }
+            rotate: true
+            inacurracy: 8
+            reload: 300
+            recoil: 1
+            shootCone: 10
+            rotationLimit: 0
+            cooldownTime: 240
+            bullet: {
+                speed: 8
+                lifetime: 25
+                damage: 3
+                width: 3
+                height: 8
+                despawnHit: true
+                despawnEffect: none
+                chargeEffect: "smokeCloud"
             /*"chargeEffect": {
                 "type": "multiEffect",
                 "lifetime": 60,
@@ -161,16 +159,17 @@ weapons: [
                     }
                 ]
             },*/
-            "shootEffect": {
-                "type": "WaveEffect",
-                "lifetime": 10,
-                "sizeFrom": 0,
-                "sizeTo": 4,
-                "strokeFrom": 4,
-                "strokeTo": 0,
-                "colorFrom": "66B1FFFF",
-                "colorTo": "66B1FFFF"
-            },
+                shootEffect: {
+                    type: WaveEffect
+                    lifetime: 10
+                    sizeFrom: 0
+                    sizeTo: 4
+                    strokeFrom: 4
+                    strokeTo: 0
+                    colorFrom: 66B1FFFF
+                    colorTo: 66B1FFFF
+                }
+            }
         }
-    }
-]
+    ]
+}

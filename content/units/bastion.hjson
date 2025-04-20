@@ -1,98 +1,123 @@
-type: "legs",
-speed: 0.4,
-hitSize: 26,
-health: 16800,
-armor: 20
-faceTarget: true,
-range: 300,
-targetAir: true,
-
-      "legGroupSize": 2,
-      "legCount": 6,
-      "legContinuousMove": true,
-      "legLength": 35, 
-      "legSplashDamage": 22,
-      "legSplashRange": 20,
-
-allowLegStep: true
-hovering: false
-
-weapons: [
-    {
-        name: bastion-gun
-        x: 20
-        y: 5.5
-        shootX: 0
-        shootY: 24
-        mirror: true
-        alternate: true
-        shoot: {
-            type: ShootPattern
-            shots: 1
+{
+    type: legs
+    speed: 0.4
+    hitSize: 26
+    health: 16800
+    armor: 20
+    faceTarget: true
+    range: 300
+    targetAir: true
+    legGroupSize: 2
+    legCount: 6
+    legContinuousMove: true
+    legLength: 35
+    legSplashDamage: 40
+    legSplashRange: 20
+    allowLegStep: true
+    hovering: false
+    parts: [
+        {
+            type: RegionPart
+            suffix: -glow
+            outline: false
+            mirror: false
+            blending: additive
         }
-        rotate: true
-        inacurracy: 8
-        reload: 2
-        recoil: 1
-        shootCone: 15
-        rotationLimit: 22
-        cooldownTime: 120
-        bullet: {
-            speed: 12
-            lifetime: 25
-            damage: 27
-            width: 12
-            height: 20
-            despawnHit: true
-            despawnEffect: none
-            splashDamage: 13
-            splashDamageRadius: 14
-            hitEffect: {
-                "type": "WaveEffect",
-                "lifetime": 4,
-                "sizeFrom": 14,
-                "sizeTo": 14,
-                "strokeFrom": 4,
-                "strokeTo": 0,
+    ]
+    weapons: [
+        {
+            name: bastion-gun
+            x: 20
+            y: 5.5
+            shootX: 0
+            shootY: 24
+            mirror: true
+            alternate: true
+            shoot: {
+                type: ShootPattern
+                shots: 1
+            }
+            rotate: true
+            inacurracy: 8
+            reload: 2
+            recoil: 1
+            shootCone: 15
+            rotationLimit: 22
+            cooldownTime: 120
+            ejectEffect: casing3
+            bullet: {
+                speed: 12
+                lifetime: 25
+                damage: 30
+                width: 12
+                height: 20
+                despawnHit: true
+                despawnEffect: none
+                splashDamage: 20
+                splashDamageRadius: 14
+                hitEffect: {
+                    type: ExplosionEffect
+                    waveLife: 15
+                    waveRad: 8
+                    sparks: 3
+                    sparkLen: 2
+                    sparkStroke: 1
+                    lifetime: 15
+                    sparkRad: 12
+                }
             }
         }
-    },
-]
-
-abilities: [
-    {
-        type: ShieldArcAbility
-        "region": "mm-bastion-shield",
-        drawArc: true
-        angle: 35
-        regen: 4
-        y: -35
-        max: 4000
-        width: 4
-        color: "00ffff"
-    },
-    {
-        type: ShieldArcAbility
-        "region": "mm-bastion-shield",
-        drawArc: true
-        angle: 40
-        radius: 32
-        angleOffset: 80
-        regen: 4
-        max: 1500
-        width: 2
-        color: "ff00ff"
-    },
-    {
-        type: ShieldArcAbility
-        "region": "mm-bastion-shield",
-        drawArc: true
-        angle: 40
-        radius: 32
-        angleOffset: -80
-        regen: 4
-        max: 1500
-        width: 2
-        color: "ffff00"
-    },
-]
+    ]
+    abilities: [
+        {
+            type: ShieldArcAbility
+            region: mm-bastion-shield-main
+            drawArc: false
+            angle: 35
+            regen: 4
+            y: -35
+            max: 3000
+            width: 1
+        }
+        {
+            type: ShieldArcAbility
+            region: mm-bastion-shield-left
+            drawArc: false
+            angle: 40
+            radius: 32
+            angleOffset: 80
+            regen: 4
+            max: 1500
+            width: 2
+        }
+        {
+            type: ShieldArcAbility
+            region: mm-bastion-shield-right
+            drawArc: false
+            angle: 40
+            radius: 32
+            angleOffset: -80
+            regen: 4
+            max: 1500
+            width: 2
+        }
+        {
+            type: StatusFieldAbility
+            onShoot: true
+            effect: none
+            range: 0
+            effectY: 10
+            reload: 2
+            activeEffect: {
+                type: ParticleEffect
+                particles: 4
+                lifetime: 10
+                length: 5
+                line: true
+                lenFrom: 1
+                lenTo: 0
+                cone: 360
+            }
+        }
+    ]
+}

@@ -1,51 +1,49 @@
-
-"type": "legs",
-"speed": 0.4,
-"hitSize": 12,
-"health": 600,
-"faceTarget": true,
-"range": 280,
-"targetAir": true,
-
-       "legGroupSize": 1,
-       "legCount": 4,
-      "legContinuousMove": true,
-  
-  "legLength": 9.5, 
-  "allowLegStep": true,
-  "hovering": false,
-
-weapons: [
-    {   
-        name: CUMень-gun
-        x: 2
-        y: 0
-        shootY: 10
-        mirror: false
-        shoot: {
-            type: ShootPattern
-            shots: 1
-            firstShotDelay: 30
+{
+    type: legs
+    speed: 0.4
+    hitSize: 12
+    health: 600
+    faceTarget: true
+    range: 280
+    targetAir: true
+    legGroupSize: 1
+    legCount: 4
+    legContinuousMove: true
+    legLength: 9.5
+    allowLegStep: true
+    hovering: false
+    weapons: [
+        {
+            name: CUMень-gun
+            x: 2
+            y: 0
+            shootY: 10
+            mirror: false
+            shoot: {
+                type: ShootPattern
+                shots: 1
+                firstShotDelay: 30
+            }
+            rotate: false
+            inacurracy: 8
+            reload: 120
+            recoil: 4
+            shootCone: 15
+            rotationLimit: 0
+            minWarmup: 0.999
+            cooldownTime: 10
+            shootStatus: unmoving
+            shootStatusDuration: 60
+            bullet: {
+                shootEffect: smokeCloud
+                speed: 10
+                lifetime: 28
+                damage: 100
+                width: 10
+                height: 20
+                despawnHit: true
+                despawnEffect: none
+            }
         }
-        rotate: false
-        inacurracy: 8
-        reload: 120
-        recoil: 4
-        shootCone: 15
-        rotationLimit: 0
-        minWarmup: 0.999
-        cooldownTime: 10
-        shootStatus: unmoving
-        shootStatusDuration: 60
-        bullet: {
-            shootEffect: smokeCloud
-            speed: 10
-            lifetime: 28
-            damage: 100
-            width: 10
-            height: 20
-            despawnHit: true
-            despawnEffect: none
-        }
-    }
-]
+    ]
+}
