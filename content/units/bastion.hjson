@@ -7,7 +7,7 @@
     faceTarget: true
     range: 300
     targetAir: true
-    legGroupSize: 2
+    legGroupSize: 3
     legCount: 6
     legContinuousMove: true
     legLength: 35
@@ -22,6 +22,9 @@
             outline: false
             mirror: false
             blending: additive
+            heatLightOpacity: 1
+            heatLight: true
+            drawRegion: false
         }
     ]
     weapons: [
@@ -38,7 +41,7 @@
                 shots: 1
             }
             rotate: true
-            inacurracy: 8
+            inaccuracy: 6
             reload: 2
             recoil: 1
             shootCone: 15
@@ -100,24 +103,6 @@
             regen: 4
             max: 1500
             width: 2
-        }
-        {
-            type: StatusFieldAbility
-            onShoot: true
-            effect: none
-            range: 0
-            effectY: 10
-            reload: 2
-            activeEffect: {
-                type: ParticleEffect
-                particles: 4
-                lifetime: 10
-                length: 5
-                line: true
-                lenFrom: 1
-                lenTo: 0
-                cone: 360
-            }
         }
     ]
 }

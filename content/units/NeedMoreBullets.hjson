@@ -29,62 +29,20 @@
                 firstShotDelay: 60
             }
             rotate: true
-            inacurracy: 8
+            inaccuracy: 1
             reload: 240
             recoil: 1
-            shootCone: 15
+            shootCone: 20
             rotationLimit: 0
             cooldownTime: 240
+            ejectEffect: casing1
             bullet: {
+                type: BasicBulletType
                 speed: 8
                 lifetime: 25
                 damage: 3
                 width: 3
                 height: 8
-                despawnHit: true
-                despawnEffect: none
-                chargeEffect: {
-                    type: multiEffect
-                    lifetime: 60
-                    effects: [
-                        {
-                            type: ParticleEffect
-                            line: true
-                            particles: 2
-                            lifetime: 20
-                            offset: 50
-                            length: 12
-                            baseLength: -12
-                            cone: 8
-                            interp: pow3In
-                            sizeInterp: pow5Out
-                            strokeFrom: 0
-                            strokeTo: 2
-                            lenFrom: 0
-                            lenTo: 2
-                            colorFrom: A9D8FFFF
-                            colorTo: 66B1FFFF
-                        }
-                        {
-                            type: ParticleEffect
-                            line: true
-                            particles: 4
-                            lifetime: 20
-                            offset: 50
-                            length: 4
-                            baseLength: -4
-                            cone: 4
-                            interp: pow3In
-                            sizeInterp: pow5Out
-                            strokeFrom: 0
-                            strokeTo: 2
-                            lenFrom: 0
-                            lenTo: 4
-                            colorFrom: A9D8FFFF
-                            colorTo: 66B1FFFF
-                        }
-                    ]
-                }
             }
         }
         {
@@ -102,73 +60,20 @@
                 firstShotDelay: 60
             }
             rotate: true
-            inacurracy: 8
+            inaccuracy: 1
             reload: 300
             recoil: 1
-            shootCone: 10
+            shootCone: 30
             rotationLimit: 0
             cooldownTime: 240
+            ejectEffect: casing1
             bullet: {
+                type: BasicBulletType
                 speed: 8
                 lifetime: 25
                 damage: 3
                 width: 3
                 height: 8
-                despawnHit: true
-                despawnEffect: none
-                chargeEffect: "smokeCloud"
-            /*"chargeEffect": {
-                "type": "multiEffect",
-                "lifetime": 60,
-                "effects": [
-                    {
-                        type: ParticleEffect
-                        line: true
-                        particles: 2
-                        lifetime: 20
-                        offset: 50
-                        length: 12
-                        baseLength: -12
-                        cone: 8
-                        interp: pow3In
-                        sizeInterp: pow5Out
-                        strokeFrom: 0
-                        strokeTo: 2
-                        lenFrom: 0
-                        lenTo: 2
-                        colorFrom: A9D8FFFF
-                        colorTo: 66B1FFFF
-                    },
-                    {
-                        type: ParticleEffect
-                        line: true
-                        particles: 4
-                        lifetime: 20
-                        offset: 50
-                        length: 4
-                        baseLength: -4
-                        cone: 4
-                        interp: pow3In
-                        sizeInterp: pow5Out
-                        strokeFrom: 0
-                        strokeTo: 2
-                        lenFrom: 0
-                        lenTo: 4
-                        colorFrom: A9D8FFFF
-                        colorTo: 66B1FFFF
-                    }
-                ]
-            },*/
-                shootEffect: {
-                    type: WaveEffect
-                    lifetime: 10
-                    sizeFrom: 0
-                    sizeTo: 4
-                    strokeFrom: 4
-                    strokeTo: 0
-                    colorFrom: 66B1FFFF
-                    colorTo: 66B1FFFF
-                }
             }
         }
     ]
