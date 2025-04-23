@@ -1,0 +1,43 @@
+{
+    type: legs
+    speed: 0.8
+    hitSize: 6
+    health: 100
+    faceTarget: false
+    range: 240
+    targetAir: true
+    legGroupSize: 1
+    legCount: 4
+    legContinuousMove: true
+    legLength: 8
+    allowLegStep: true
+    hovering: false
+    weapons: [
+        {
+            name: t1-gun
+            x: 0
+            y: 0
+            shootY: 6
+            mirror: false
+            shoot: {
+                type: ShootPattern
+                shots: 3
+                shotDelay: 2
+            }
+            rotate: true
+            reload: 60
+            recoil: 2
+            shootCone: 15
+            cooldownTime: 30
+            ejectEffect: casing1
+            bullet: {
+                type: BasicBulletType 
+                speed: 8
+                damage: 10
+                lifetime: 30
+                width: 6
+                height: 12
+            }
+        }
+    ]
+}

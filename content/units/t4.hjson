@@ -1,0 +1,16 @@
+{
+    type: legs
+    speed: 1
+    hitSize: 10
+    health: 6000
+    armor: 10
+    faceTarget: false
+    range: 200
+    targetAir: true
+    legGroupSize: 1
+    legCount: 4
+    legContinuousMove: true
+    legLength: 8
+    allowLegStep: true
+    hovering: false
+}

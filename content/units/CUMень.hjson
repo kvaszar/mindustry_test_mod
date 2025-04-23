@@ -41,7 +41,7 @@
                 width: 10
                 height: 20
                 pierce: true
-                pierceBuildings: true
+                pierceBuilding: true
                 pierceCap: 3
                 //frag
                 fragBullets: 3
@@ -54,8 +54,8 @@
                     width: 5
                     height: 10
                     pierce: true
-                    pierceBuildings: true
-                    pierceCap: 100
+                    pierceBuilding: true
+                    pierceCap: 3
                     fragBullets: 3
                     fragRandomSpread: 5
                     fragBullet: {
@@ -66,7 +66,7 @@
                         width: 3
                         height: 6
                         pierce: true
-                        pierceBuildings: true
+                        pierceBuilding: true
                         pierceCap: 3
                     }
                 }
